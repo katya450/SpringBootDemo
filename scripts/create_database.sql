@@ -1,0 +1,5 @@
+DROP DATABASE IF EXISTS shoppinglist;
+DROP USER IF EXISTS shopper;
+CREATE USER shopper WITH PASSWORD 'shop';
+CREATE DATABASE shoppinglist WITH OWNER = shopper;
+GRANT ALL PRIVILEGES ON DATABASE shoppinglist TO shopper;
