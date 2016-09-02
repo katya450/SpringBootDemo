@@ -14,14 +14,20 @@ import java.util.List;
 @RestController
 @RequestMapping("/shoppinglist")
 public class ShoppingListController {
-	//@Autowired
-	//private ShoppingListRepository shoppinglistrepo;
+	
+	private ShoppingListRepository shoppingListRepo;
+	
+	@Autowired
+	public ShoppingListController(ShoppingListRepository shopListRepo) {
+	this.shoppingListRepo = shopListRepo;
+	}
 	
 	@ResponseBody @RequestMapping(method = RequestMethod.POST)
 	public Item addItem (@RequestBody Item item) {
+		shoppingListRepo.save(item);
 		return item;
 	}
 	
-	
+
 	
 }
