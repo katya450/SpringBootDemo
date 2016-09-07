@@ -1,0 +1,27 @@
+{
+  "engines": {
+    "node": "0.12.x"
+  },
+  "name": "shoppinglist",
+  "private": true,
+  "version": "2.7.5",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/katya450/SpringBootDemo"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "bower": "^1.4.0"
+  },
+  "bugs": {
+    "url": "https://github.com/katya450/SpringBootDemo/issues"
+  },
+  "homepage": "https://github.com/katya450/SpringBootDemo",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": ""
+}

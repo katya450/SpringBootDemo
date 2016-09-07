@@ -1,0 +1,26 @@
+{
+  "name": "SpringBootDemo",
+  "homepage": "https://github.com/katya450/SpringBootDemo",
+  "authors": [
+    "Katja Lusma <katja.lusma@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0"
+    "requirejs": "~2.1.18",
+    "handlebars": "~3.0.3",
+    "bacon": "~0.7.82",
+    "bacon.jquery": "~0.4.12",
+    "bacon.model": "~0.1.12"
+  }
+}
