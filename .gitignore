@@ -15,6 +15,7 @@ $RECYCLE.BIN/
 .*
 !.gitignore
 !.git*
+!.bowerrc
 *~
 
 
@@ -90,5 +91,6 @@ target/
 
 ### Bower and Node ###
 node_modules
+src/main/resources/public/bower
 bower_components
 
