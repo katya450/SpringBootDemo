@@ -12,7 +12,14 @@ $(function() {
 			type: "POST",
 			dataType: "json"
 		})
-		console.log(item, amount);
+		.done(function(response) {	
+			console.log(response);
+	        $("tbody").append("<tr><td>" + response.name + "</td><td>" + response.amount + "</td></tr>");
+		})
+		.fail(function(error) {
+			console.log(error); //TODO: error objectista tsekkaa ja tee erilaisia käsittelyjä eri erroreille
+		});
+		
 	});
 
 });
