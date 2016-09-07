@@ -87,3 +87,8 @@ local.properties
 target/
 
 /bin
+
+### Bower and Node ###
+node_modules
+bower_components
+
