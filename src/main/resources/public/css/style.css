@@ -1,1 +1,31 @@
 @CHARSET "UTF-8";
+
+#container {
+	margin: 35px;
+	width: 400px;
+}
+
+#shoppinglisttable {
+	margin-top: 20px;
+}
+
+thead {
+	text-align: left;
+}
+
+.delete {
+	background-color: #e0d2c8;
+	border-radius: 25%;
+	border: none;
+	margin: auto;
+}
+
+.delete:hover {
+	background-color: #d8bb22;
+}
+
+.list {
+	width: 250px;
+	padding-left: 15px;
+	
+}

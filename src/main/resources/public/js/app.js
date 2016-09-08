@@ -15,7 +15,7 @@ $(function() {
 		})
 		.done(function(response) {	
 			console.log(response);
-	        $("tbody").append("<tr><td>" + response.name + "</td><td>" + response.amount + "</td></tr>");
+	        $("tbody").append("<tr><td></td><td>" + response.name + "</td><td>" + response.amount + "</td></tr>");
 		})
 		.fail(function(error) {
 			console.log(error); //TODO: error objectista tsekkaa ja tee erilaisia käsittelyjä eri erroreille
@@ -32,7 +32,8 @@ $(function() {
 	})
 	.done(function(itemlist) {
 		itemlist.forEach(function(item) {
-			$("tbody").append("<tr><td>" + item.name + "</td><td>" + item.amount + "</td></tr>");
+			$("tbody").append('<tr><td><button class="delete">X</button></td><td class="list">' + item.name + 
+					'</td><td  class="list">' + item.amount + '</td></tr>');
 		})
 	});
 	
