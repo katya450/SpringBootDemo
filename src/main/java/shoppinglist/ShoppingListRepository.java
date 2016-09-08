@@ -7,6 +7,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ShoppingListRepository extends JpaRepository<Item, Long>{
 	
-	
-	//List<Item> showAll();
 }

@@ -1,6 +1,7 @@
 $(function() {
-	console.log ('jee');
+	console.log ('connection established here. you may proceed.');
 	
+	//lisää asioita ostoslistalle ja näyttää lisätyn asian sivulla
 	$("#add").click(function(){		    
 		var item = $("#itemname").val();
 		var amount = $("#itemamount").val();
@@ -19,7 +20,20 @@ $(function() {
 		.fail(function(error) {
 			console.log(error); //TODO: error objectista tsekkaa ja tee erilaisia käsittelyjä eri erroreille
 		});
-		
 	});
-
+	
+	
+	//sivun latautuessa haetaan kaikki tietokannassa olevat asiat näkyviin
+	$.ajax({
+		url: "/shoppinglist",
+		contentType: "application/json",
+		type: "GET",
+		dataType: "json"
+	})
+	.done(function(itemlist) {
+		itemlist.forEach(function(item) {
+			$("tbody").append("<tr><td>" + item.name + "</td><td>" + item.amount + "</td></tr>");
+		})
+	});
+	
 });

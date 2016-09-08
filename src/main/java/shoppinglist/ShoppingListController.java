@@ -29,4 +29,10 @@ public class ShoppingListController {
 		return item;
 	}
 	
+	@ResponseBody @RequestMapping(value="", method = RequestMethod.GET)
+	public Iterable<Item> getAllItems() {
+		return shoppingListRepo.findAll();
+	}
+
+	
 }
