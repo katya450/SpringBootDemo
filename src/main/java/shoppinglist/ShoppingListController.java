@@ -36,9 +36,10 @@ public class ShoppingListController {
 		return shoppingListRepo.findAll();
 	}
 	
-	@RequestMapping(value="/id={id}", method=RequestMethod.DELETE)
-	  public void delete(@PathVariable Long id) {
+	@RequestMapping(value="/{id}", method=RequestMethod.DELETE)
+	  public Long delete(@PathVariable Long id) {
 			shoppingListRepo.delete(id);
+			return id;
 	  }
 	
 }

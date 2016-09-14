@@ -15,7 +15,7 @@ $(function() {
 		})
 		.done(function(response) {	
 			console.log(response);
-	        $("tbody").append('<tr><td><button class="delete">X</button></td><td class="list">' + response.name + '</td><td class="list">' + response.amount + '</td></tr>');
+	        $("tbody").append('<tr><td><button class="delete" data-id="' + response.id + '">X</button></td><td class="list">' + response.name + '</td><td class="list">' + response.amount + '</td></tr>');
 		})
 		.fail(function(error) {
 			console.log(error); //TODO: error objectista tsekkaa ja tee erilaisia käsittelyjä eri erroreille
@@ -32,9 +32,44 @@ $(function() {
 	})
 	.done(function(itemlist) {
 		itemlist.forEach(function(item) {
-			$("tbody").append('<tr><td><button class="delete">X</button></td><td class="list">' + item.name + 
+			$("tbody").append('<tr><td><button class="delete" data-id="' + item.id + '">X</button></td><td class="list">' + item.name + 
 					'</td><td  class="list">' + item.amount + '</td></tr>');
 		})
 	});
 	
+	//poistetaan tietyn id:n omaava asia tietokannasta
+	$("tbody").on("click", ".delete", function(event) {	
+		var dataid = $(event.target).attr("data-id");
+		
+		$.ajax({
+			url: "/shoppinglist/" + dataid,
+			type: "DELETE"
+		})
+		.done(function(id) {
+			$(".delete[data-id=" + id + "]").closest("tr").remove();
+		});
+		
+	});
+	
+
+	
+	
+		
+	
+	
+	/*$(".delete").click(function(){
+		var dataid = id;
+		console.log ('delete button clicked with id' + dataid);
+
+			
+		$.ajax({
+			url: "/shoppinglist/id=" + dataid,
+			type: "DELETE"
+		})
+		.done(function(itemlist) {
+			itemlist.remove(dataid);
+		});	
+	});
+	
+	*/
 });
