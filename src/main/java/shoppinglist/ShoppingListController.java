@@ -4,6 +4,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -34,6 +35,10 @@ public class ShoppingListController {
 	public Iterable<Item> getAllItems() {
 		return shoppingListRepo.findAll();
 	}
-
+	
+	@RequestMapping(value="/id={id}", method=RequestMethod.DELETE)
+	  public void delete(@PathVariable Long id) {
+			shoppingListRepo.delete(id);
+	  }
 	
 }
