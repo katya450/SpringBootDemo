@@ -1,8 +1,16 @@
 @CHARSET "UTF-8";
 
+
 #container {
 	margin: 35px;
+	padding: 20px;
 	width: 400px;
+	background: #eeeeec none repeat scroll 0 0;
+}
+
+
+body {
+	background: #1a4408 none repeat scroll 0 0;
 }
 
 #shoppinglisttable {
