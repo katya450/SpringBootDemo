@@ -40,5 +40,4 @@ public class Item {
 	public void setAmount(String amount) {
 		this.amount = amount;
 	}
-	
 }
