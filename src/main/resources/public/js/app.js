@@ -35,8 +35,9 @@ $(function() {
 	});
 	
 	function shoppingListRow (item) {
-		return '<tr><td><button class="delete" data-id="' + item.id + '">X</button></td><td class="list">' + item.name + 
-		'</td><td  class="list">' + item.amount + '</td></tr>'
+		return '<tr><td class="list">' + item.name + 
+		'</td><td  class="listamount">' + item.amount + '</td><td><button class="delete" data-id="' + 
+		item.id + '">X</button></td></tr>'
 	} 
 		
 	//poistetaan tietyn id:n omaava asia tietokannasta

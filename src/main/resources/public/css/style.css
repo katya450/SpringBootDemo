@@ -1,5 +1,8 @@
 @CHARSET "UTF-8";
 
+body {
+	background: #ffffff none repeat scroll 0 0;
+}
 
 #container {
 	margin: 35px;
@@ -8,9 +11,24 @@
 	background: #eeeeec none repeat scroll 0 0;
 }
 
+h1 {
+	font-size: 23px;
+}
 
-body {
-	background: #1a4408 none repeat scroll 0 0;
+#itemname {
+	width: 175px;
+}
+
+#itemamount {
+	width: 85px;
+}
+
+.add {
+	width: 275px;
+	height: 30px;	
+	margin-top: 10px;
+	background: #ff5f08;
+	border: none;
 }
 
 #shoppinglisttable {
@@ -19,21 +37,30 @@ body {
 
 thead {
 	text-align: left;
+	padding-left: 15px;
+}
+
+.amount {
+	padding-left: 15px;
 }
 
 .delete {
-	background-color: #e0d2c8;
-	border-radius: 25%;
-	border: none;
+	background-color: #eeeeec;
+	border: 1px;
 	margin: auto;
+	padding-left: 10px;
 }
 
 .delete:hover {
-	background-color: #d8bb22;
+	font-weight: 900;
+	cursor: pointer;
 }
 
 .list {
-	width: 250px;
+	width: 140px;
+}
+
+.listamount {
+	width: 90px;
 	padding-left: 15px;
-	
 }
